@@ -1,9 +1,9 @@
 'use client';
 
-import Item from "./item";
+import Item from "../item";
 import { useState } from "react";
 
-export default function ItemList({ items }) {
+export default function ItemList({ items, onItemSelect }) {
     const [sortBy, setSortBy] = useState("name");
 
     const sortedItems = [...items].sort((a, b) => {
@@ -43,6 +43,7 @@ export default function ItemList({ items }) {
                         name={item.name}
                         quantity={item.quantity}
                         category={item.category}
+                        onSelect={() => onItemSelect(item)}
                     />
                 ))}
             </section>
