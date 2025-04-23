@@ -21,8 +21,8 @@ export default function Page() {
             ) : (
                 // If the user is logged in, display the welcome message, logout button, and link to the shopping list
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold mb-5">Welcome, {user.displayName}!</h1>
-                    <p className="text-lg mb-5">Email: {user.email}</p>
+                    <h1 className="text-3xl font-bold mb-5 text-black">Welcome, {user.displayName}!</h1>
+                    <p className="text-lg mb-5 text-black">Email: {user.email}</p>
                     <button
                         onClick={firebaseSignOut}
                         className="px-6 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 transition duration-200 mb-5"
@@ -30,7 +30,7 @@ export default function Page() {
                         Logout
                     </button>
                     <a
-                        href="/week-8"
+                        href="/week-9"
                         className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition duration-200"
                     >
                         Go to Shopping List
